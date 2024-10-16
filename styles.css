@@ -81,7 +81,6 @@ body {
     gap: 30px;
 }
 
-/* Hover Effect för restaurangbilder och text */
 .restaurant {
     text-align: center;
 }
@@ -207,8 +206,10 @@ body {
 }
 
 
-/* Media Queries för mobilanpassning */
-@media (max-width: 768px) {
+
+
+/* Anpassning för skärmar med maxbredd på 768px */
+@media only screen and (max-width: 768px) {
     
     .banner-text {
         font-size: 36pt;
@@ -298,7 +299,23 @@ body {
         color: white;
     }
 
+}
 
 
+
+
+
+/* Anpassning för skärmar med maxbredd på 479px */
+@media only screen and (max-width: 479px) {
+    
+    .banner-text {
+        font-size: 30pt;
+    }
+
+    /* Minimalistisk sökruta med genomskinlig bakgrund */
+    .searchbar input[type=text] {
+        font-size: 12pt;
+        width: 75%;
+    }
 
 }

@@ -375,3 +375,12 @@ body {
 
 
 }
+
+/* Anpassning för skärmar med maxbredd på 479px */
+@media only screen and (max-width: 479px) {
+    
+    .banner-text {
+        font-size: 20pt;
+    }
+
+}
