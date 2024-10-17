@@ -74,11 +74,11 @@ body {
 
 /* Placeringen för restaurangerna */
 .restaurant-grid {
-    display: flex;
+    display: grid;
     justify-content: center;
-    flex-wrap: wrap;
     padding: 20px;
     gap: 30px;
+    grid-template-columns: repeat(4,auto);
 }
 
 .restaurant {
