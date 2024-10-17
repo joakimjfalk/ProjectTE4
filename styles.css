@@ -206,6 +206,15 @@ body {
 }
 
 
+@media only screen and (max-width: 1076px) {
+    .searchbar input[type=text] {
+        width: 50%;
+    }
+
+    .restaurant-grid {
+        grid-template-columns: repeat(2,auto);
+    }
+}
 
 
 /* Anpassning för skärmar med maxbredd på 768px */
@@ -221,7 +230,7 @@ body {
 
     .restaurant-grid {
         gap: 15px;
-        flex-direction: column;
+        grid-template-columns: repeat(1,auto);
         padding: 10px;
     }
 
@@ -315,7 +324,7 @@ body {
     /* Minimalistisk sökruta med genomskinlig bakgrund */
     .searchbar input[type=text] {
         font-size: 12pt;
-        width: 75%;
+        width: 60%;
     }
 
 }
@@ -331,7 +340,8 @@ body {
     /* Minimalistisk sökruta med genomskinlig bakgrund */
     .searchbar input[type=text] {
         font-size: 10pt;
-        width: 75%;
+        width: 60%;
     }
 
 }
+
