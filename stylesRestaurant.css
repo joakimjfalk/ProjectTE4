@@ -380,7 +380,24 @@ body {
 @media only screen and (max-width: 479px) {
     
     .banner-text {
-        font-size: 20pt;
+        font-size: 16pt;
     }
 
+    /* Minimalistisk sökruta med genomskinlig bakgrund */
+    .searchbar input[type=text] {
+        font-size: 10pt;
+        width: 75%;
+    }
+
+}
+
+@media only screen and (max-width: 400px) {
+    .banner-text {
+        font-size: 12pt;
+    }
+
+    .searchbar inpuit[type=text] {
+        font-size: 10pt;
+        width: 80%;
+    }
 }

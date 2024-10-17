@@ -309,12 +309,28 @@ body {
 @media only screen and (max-width: 479px) {
     
     .banner-text {
-        font-size: 30pt;
+        font-size: 26pt;
     }
 
     /* Minimalistisk sökruta med genomskinlig bakgrund */
     .searchbar input[type=text] {
         font-size: 12pt;
+        width: 75%;
+    }
+
+}
+
+
+/* Anpassning för skärmar med maxbredd på 479px */
+@media only screen and (max-width: 400px) {
+    
+    .banner-text {
+        font-size: 12pt;
+    }
+
+    /* Minimalistisk sökruta med genomskinlig bakgrund */
+    .searchbar input[type=text] {
+        font-size: 10pt;
         width: 75%;
     }
 
