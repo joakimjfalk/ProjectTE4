@@ -263,7 +263,6 @@ body {
         background-color: rgb(24, 26, 27); 
         box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Skugga */
         list-style-type: none; /* Ta bort punkterna */
-        padding: 5px;
         border-radius: 5px; /* Rundade hörn */
         font-size: 10pt;
     }
@@ -345,3 +344,17 @@ body {
 
 }
 
+/*Anpassningar för skärmar med maxbredd på 300px */
+@media only screen and (max-width: 300px) {
+    .banner {
+        height: 250px;
+    }
+
+    .restaurant p {
+        font-size: 18pt;
+    }
+
+    .menu-list {
+        right: 0px;
+    }
+}

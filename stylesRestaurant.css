@@ -258,8 +258,14 @@ body {
     color: white;
 }
 
+/* Anpassningar för skärmar med maxbredd på 1076px */
+@media only screen and (max-width: 1076px) {
+    .banner-text {
+        font-size: 26pt;
+    }
+}
 
-/* Media Queries för mobilanpassning */
+/* Media Queries för skärmar med maxbredd på 768px */
 @media (max-width: 768px) {
     
     .banner-text {
@@ -391,6 +397,7 @@ body {
 
 }
 
+/*Anpassning för skärmar med maxbredd på 400px */
 @media only screen and (max-width: 400px) {
     .banner-text {
         font-size: 12pt;
@@ -399,5 +406,40 @@ body {
     .searchbar inpuit[type=text] {
         font-size: 10pt;
         width: 80%;
+    }
+
+    .food img {
+        width: 120px;
+        height: 120px;
+    }
+
+    .restaurant-info img {
+        width: 120px;
+        height: 120px;
+    }
+}
+
+/*Anpassningar för skärmar med maxbredd på 300px */
+@media only screen and (max-width: 300px) {
+    .restaurant-info img {
+        width: 90px;
+        height: 90px;
+    }
+
+    .description {
+        font-size: 10pt;
+    }
+
+    .description-title h1 {
+        font-size: 16pt;
+    }
+
+    .food img {
+        width: 90px;
+        height: 90px;
+    }
+
+    .banner {
+        height: 250px;
     }
 }
