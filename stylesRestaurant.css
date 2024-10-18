@@ -158,25 +158,13 @@ body {
     color: white;
     letter-spacing: 2px;
     line-height: 1;
-    font-weight: 300;
     position: relative;
-    text-decoration: underline;
-}
-
-
-.banner-text:hover{
-    color:deeppink;
+    margin-bottom: 25px;
+    margin-left: 150px;
 }
 
 .banner-description {
     font-size: 24pt;
-}
-
-.menu {
-    display: table-cell;
-    vertical-align: middle;
-    width: 100%;
-    min-width: 100%;
 }
 
 .food {
@@ -232,29 +220,17 @@ body {
     margin-right: 50px; /* Flyttar bilden lite till höger */
 }
 
-
-.banner-text {
-    font-size: 48pt;
-    color: white;
-    text-decoration: underline;
-    margin-bottom: 25px;
-    margin-left: 150px;
-}
-
 .banner-description {
     font-size: 18pt;
     color: white;
-    text-decoration: none;
     background-color: rgba(117, 113, 113, 0.3);
     padding: 10px 20px;
     border-radius: 5px;
-    text-decoration-line: underline;
-    text-decoration-color: white;
     margin-left: 150px;
 }
 
 .banner-description:hover {
-    background-color: deeppink;
+    background-color: rgba(145, 140, 140, 0.3);
     color: white;
 }
 
@@ -329,15 +305,9 @@ body {
         background-color: #373636; /* Bakgrundsfärg vid hover */
         border-radius: 3px; /* Rundade hörn vid hover */
     }
-
-    .menu {
-        display: table-cell;
-        min-width: 100%;
-    }
     
     .food {
         margin: inherit;
-        max-width: 400px;
         overflow: hidden;
         margin: 20px;
         width: fit-content;
@@ -417,6 +387,10 @@ body {
         width: 120px;
         height: 120px;
     }
+
+    .menu-list {
+        right: 0px;
+    }
 }
 
 /*Anpassningar för skärmar med maxbredd på 300px */
@@ -424,6 +398,7 @@ body {
     .restaurant-info img {
         width: 90px;
         height: 90px;
+        margin-top: 10px;
     }
 
     .description {
@@ -441,5 +416,13 @@ body {
 
     .banner {
         height: 250px;
+    }
+
+    .banner-description {
+        font-size: 10pt;
+    }
+
+    .banner-text {
+        text-decoration: none;
     }
 }

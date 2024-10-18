@@ -329,7 +329,7 @@ body {
 }
 
 
-/* Anpassning för skärmar med maxbredd på 479px */
+/* Anpassning för skärmar med maxbredd på 400px */
 @media only screen and (max-width: 400px) {
     
     .banner-text {
@@ -340,6 +340,10 @@ body {
     .searchbar input[type=text] {
         font-size: 10pt;
         width: 60%;
+    }
+
+    .menu-list {
+        right: 0px;
     }
 
 }
