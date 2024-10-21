@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    
+
+	<!--Språket som används, UTF-8 för ÅÄÖ-->
+	<meta charset="UTF-8">
+	<!--Se till att sidan skalas till rätt bredd på mobiltelefoner-->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		
+	<!--Titeln på tabben-->
+	<title>MatAvtryck STARTSIDA</title>
+	<!--Länka till CSS filen-->
+	<link rel="stylesheet" href="productStyles.css">
+		
+	<!-- Importera "Lato" fonten från Google-->
+	<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet">
+		
+	<!-- Favicons/bilder för tabben-->
+	<link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+	<link rel="manifest" href="favicon/site.webmanifest">
+	<link rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#5bbad5">
+	<meta name="msapplication-TileColor" content="#da532c">
+	<meta name="theme-color" content="#ffffff">
+		
+	<!-- Google Analytics tag (gtag.js) -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-Z0F4Z4M0N6"></script>
+	<script>
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+	
+	gtag('config', 'G-Z0F4Z4M0N6');
+	</script>
+	
+	
+</head>
+
+<body>
+    
+	<!-- Banner delen av hemsidan -->
+    <section class="banner">
+	<header>
+        <div class="header-container">
+            <div class="logo-title">
+			<a class="redirect" href="https://joakimjfalk.github.io/ProjectTE4/" aria-hidden="false" tabindex="0">
+                <img src="logos\logga.jpg" class="logo">
+                <span class="site-title">MatAvtryck UF</span>	
+			</a>
+					<!-- Hamburgarmeny -->
+					<div class="hamburger-menu" onclick="myFunction(this)">
+						<div class="bar1"></div>
+						<div class="bar2"></div>
+						<div class="bar3"></div>
+					</div>
+				<!-- Själva menyn i hamburgarmenyn -->
+				<ul class="menu-list" id="menuList">
+					<li><a href="litenBräda" aria-label="Liten skärbräda">Liten skäbräda</a></li>
+					<li><a href="storBräda" aria-label="Stor skärbräda">Stor skärbräda</a></li>
+					<li><a href="paket" aria-label="Brädpaket">Paket</a></li>
+				</ul>
+            </div>
+        </div>
+    </header>
+		<div class="banner-container">        
+			<div class="restaurant-info">
+            		<img src="products/litenbräda.jpg">
+				<div class="banner-text">skabbbräda </div>
+					<span class="banner-description">Lägg till i varukorg</span>
+			</div>
+		</div>
+
+
+
+    </section>
+
+	<!-- Sektion för maträtterna -->
+    <!--
+	<section class="food-menu-grid">
+       
+    </section>
+	-->
+
+<script>
+// Skript för att öppna/stäng hamburgarmenyn
+function myFunction(x) {
+  x.classList.toggle("change");
+    var menuList = document.getElementById("menuList");
+    menuList.classList.toggle("show"); // Visa/dölj menyn
+  }
+
+</script>
+
+</body>
+</html>
