@@ -234,6 +234,10 @@ body {
     color: white;
 }
 
+/*
+------------MEDIA QUERIES----------------------
+*/
+
 /* Anpassningar för skärmar med maxbredd på 1076px */
 @media only screen and (max-width: 1076px) {
     .banner-text {
@@ -425,4 +429,28 @@ body {
     .banner-text {
         text-decoration: none;
     }
+}
+
+
+
+
+
+/* Small devices (phones, less than 576px) */
+@media (max-width: 576px) {
+
+}
+
+/* Medium devices (tablets, 576px - 768px) */
+@media (min-width: 576px) and (max-width: 768px) {
+
+}
+
+/* Larger tablets and small laptops (768px and up) */
+@media (min-width: 768px) and (max-width: 992px) {
+
+}
+
+/* Larger screens (992px and up) */
+@media (min-width: 992px) {
+
 }
