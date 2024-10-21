@@ -6,7 +6,7 @@
     text-decoration: none;
 }
 
-/* Styling på <body> */
+/* Standardstyling på <body> */
 body {
     font-family: Lato, sans-serif;
     background-color: white;
@@ -14,7 +14,7 @@ body {
     font-weight: 300;
 }
 
-/* Styling för navbaren längst upp och alla objekt inom */
+/* Header-området som innehåller logga och titel */
 .header-container {
     display: table;
     position: fixed;
@@ -25,13 +25,13 @@ body {
     z-index: 1;
 }
 
-/* Styling för alla objekt inom header-container */
+/* Flexbox-layout för logga och sidtitel i header */
 .logo-title {
     display: flex;
-    align-items: center; /* Sätter alla objekt på samma höjd */
+    align-items: center;
 }
 
-/* Styling för loggan */
+/* Logga (bild) styling */
 .logo {
   display: inline-block;
   max-height: 56px;
@@ -39,7 +39,7 @@ body {
   padding: 8px 4px 8px 12px;
 }
 
-/* Styling för företagets namn "MatAvtryck UF" */
+/* Sidans titel (företagsnamn) styling */
 .site-title {
   display: inline-block;
   line-height: 1;
@@ -48,49 +48,52 @@ body {
   overflow: hidden;
   padding: 16px 12px;
   text-decoration: none;
-  text-overflow: ellipsis;
-  color: rgba(255,255,255,1);
-  font-size: 15pt;
+  text-overflow: ellipsis; /* Om texten är för lång (overflow) blir det ...*/
+  color: rgba(255,255,255,1); /* Färgen på företagsnamnet*/
+  font-size: 15pt; /* Storleken på företagsnamnen*/
 }
 
-/* Styling för själva bannern */
+/* Bannern (bakgrundsbilden längst upp på sidan) */
 .banner {
-    background-image: url('banner.png'); /* bakgrundsbilden */
-    background-size: cover;
-    background-position: center;
+    background-image: url('banner.png'); /* Bilden i bakgrunden (bannern)*/
+    background-size: cover; /* Bannerbilden ska täcka hela bannersektionen*/
+    background-position: center; /* Bannerbilden ska vara centrerad*/
     padding: 100px 0;
     text-align: center;
-    height: 340px;
+    height: 340px; /* Hur långt ner bannern går */
 }
 
-/* Styling för banner-texten */
+/* Texten i bannern */
 .banner-text {
-    font-size: 64pt;
-    color: white;
-    letter-spacing: 2px;
+    font-size: 64pt; /* Storlek på texten*/
+    color: white; /* Vit text*/
+    letter-spacing: 2px; /* 2px mellanrum på bokstäverna */
     line-height: 1;
     font-weight: 300;
 }
 
-/* Placeringen för restaurangerna */
+/* Layout för restaurangbilderna */
 .restaurant-grid {
-    display: grid;
+    display: grid; /* Visa bilder i kolumner med hjälp av grid*/
     justify-content: center;
     padding: 20px;
     gap: 30px;
-    grid-template-columns: repeat(4,250px);
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Autoanpassa gridden beroende på skärmstorlek*/
 }
 
+/* Styling för varje restaurang i gridden: */
 .restaurant {
-    text-align: center;
+    text-align: center; /* Centrerar varje restauranginfo */
 }
 
+/* Restaurangbildens dimensioner och anpassning: */
 .restaurant img {
     width: 199px;
     height: 199px;
-    object-fit: contain;
+    object-fit: contain; /* Begränsar bilderna och behåller deras proportioner */
 }
 
+/* Restaurangens namn/övrig text */
 .restaurant p {
     margin-top: 10px;
     font-size: 1.2rem;
@@ -98,90 +101,92 @@ body {
     transition: color 0.3s ease;
 }
 
+/* Ändrar textfärgen när användaren hovrar över en restaurang */
 .restaurant:hover p {
     color: #5bbad5;
 }
 
-/* Hamburger Animation */
+/* Hamburger-menyens grundstruktur: Anpassar menyikonen för att vara klickbar */
 .hamburger {
     display: inline-block;
     cursor: pointer;
     position: absolute;
-    right: 0;
+    right: 0; /* positioneras till höger */
     margin: 15px;
     transition: all 0.3s ease;
 }
 
-/* Styling för strecken i hamburgarmenyn */
+/* Strecken i hamburgarmenyn: Definierar grundstruktur för de tre horisontella strecken */
 .bar1, .bar2, .bar3 {
     width: 20px;
     height: 2px;
     background-color: white;
     margin: 3px 0;
     transition: 0.4s;
-  }
-  
-  /* Styling för ändring av första strecket */
-  .change .bar1 {
+}
+
+/* Första streckets förändring vid klick */
+.change .bar1 {
     transform: translate(0, 5px) rotate(-45deg);
-  }
-  
-  /* Styling för ändring av andra strecket */
-  .change .bar2 {opacity: 0;}
-  
-  /* Styling för ändring av tredje strecket */
-  .change .bar3 {
+}
+
+/* Andra strecket försvinner vid klick */
+.change .bar2 {
+    opacity: 0;
+}
+
+/* Tredje streckets förändring vid klick */
+.change .bar3 {
     transform: translate(0, -5px) rotate(45deg);
-  }
+}
 
-
-/* Styling för dropdown menyn */
+/* Dropdown-menyn styling: Grundläggande dölja/visa funktion för dropdown-menyn */
 .menu-list {
-    display: none; /* Dölj menyn */
+    display: none;
     position: absolute;
-    top: 55px; 
-    right: 15px; 
+    top: 55px;
+    right: 15px;
     background-color: rgb(24, 26, 27); 
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Skugga */
-    list-style-type: none; /* Ta bort punkterna */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    list-style-type: none;
     padding: 10px;
     padding-left: 20px;
-    border-radius: 5px; /* Rundade hörn */
+    border-radius: 5px;
     font-size: 12pt;
 }
 
-/* När menyn visas */
+/* Visa menyn när klassen "show" läggs till: Ändrar till grid layout för menyobjekten */
 .menu-list.show {
-    display: grid; /* Visa menyn */
+    display: grid;
     grid-template-columns: repeat(2, 1fr);
 }
 
-/* Styling för varje menyalternativ */
+/* Styling för enskilda menyalternativ: Lägger mellanrum mellan alternativen */
 .menu-list li {
-    margin: 10px 0; /* Avstånd mellan alternativen */
+    margin: 10px 0;
 }
 
-/* Styling för länkarna i menyn */
+/* Länkar i menyn: Definierar text- och bakgrundsfärger för menylänkar */
 .menu-list li a {
-    text-decoration: none; /* Ta bort understrykning */
-    color: white; /* Textfärg */
-    font-weight: 300; 
-    padding: 5px; /* Inre avstånd */
-    display: block; /* Gör hela ytan klickbar */
-    background-color: rgb(49, 48, 48);
+    text-decoration: none; /*Inga understrykningar etc*/
+    color: white; /*Textfärgen */
+    font-weight: 300;
+    padding: 5px;
+    display: block;
+    background-color: rgb(49, 48, 48); /* Bakgrundsfärgen */
     width: 95%;
 }
 
-/* Hover-effekt för länkar */
+/* Hover-effekt på menylänkar: Bakgrundsändring och avrundning vid hover */
 .menu-list li a:hover {
-    background-color: #373636; /* Bakgrundsfärg vid hover */
-    border-radius: 3px; /* Rundade hörn vid hover */
+    background-color: #373636; /* Ändrar bakgrundsfärgen */
+    border-radius: 3px; /* Rundar hörnen */
 }
 
-/* Minimalistisk sökruta med genomskinlig bakgrund */
+/* Styling för sökrutan: Definierar formatering av input-fältet */
 .searchbar input[type=text] {
     width: 30%;
-    font-size: 15pt;
+    font-size: 15pt; /*Textstorleken */
     margin: 50px;
     padding: 10px;
     border: none;
@@ -192,173 +197,112 @@ body {
     color: #f1f1f1;
 }
 
-/* Placeholder texten "Sök efter restauranger" i sökrutan */
+/* Placeholder-text i sökrutan */
 .searchbar input[type=text]::placeholder {
     color: white;
     opacity: 1;
 }
 
-/* Styling på vad som händer när sökrutan blir i fokus */
+/* Sökrutan i fokus: Ändrar färger och bakgrund när input är aktiv */
 .searchbar input[type=text]:focus {
     border-bottom: 2px solid #ffffff;
     border-right: 2px solid #ffffff;
     background-color: rgba(200, 200, 200, 0.4);
 }
+/*
+------------MEDIA QUERIES----------------------
+*/
 
-
-@media only screen and (max-width: 1076px) {
-    .searchbar input[type=text] {
-        width: 50%;
-    }
-
-    .restaurant-grid {
-        grid-template-columns: repeat(2,auto);
-    }
-}
-
-
-/* Anpassning för skärmar med maxbredd på 768px */
-@media only screen and (max-width: 768px) {
-    
-    .banner-text {
-        font-size: 28pt;
-    }
-
-    .banner {
-        height: 300px;
-    }
-
-    .restaurant-grid {
-        gap: 15px;
-        grid-template-columns: repeat(1,auto);
-        padding: 10px;
-    }
-
-    .restaurant img {
-        width: 140px;
-        height: 140px;
-        margin-top: 5px;
-        transition: none;
-    }
-
-    .restaurant p {
-        font-size: 28pt;
-    }
-
-    .restaurant {
-        text-align: center;
-        transition: none;
-    }
-
-    .site-title {
-        font-size: 15pt;
-    }
-
-    /* Styling för dropdown menyn */
-    .menu-list {
-        display: none; /* Dölj menyn */
-        position: absolute;
-        top: 60px; 
-        right: 15px; 
-        background-color: rgb(24, 26, 27); 
-        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Skugga */
-        list-style-type: none; /* Ta bort punkterna */
-        border-radius: 5px; /* Rundade hörn */
-        font-size: 10pt;
-    }
-
-    /* När menyn visas */
-    .menu-list.show {
-        display: grid; /* Visa menyn */
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    /* Styling för varje menyalternativ */
-    .menu-list li {
-        margin: 10px 0; /* Avstånd mellan alternativen */
-    }
-
-    /* Styling för länkarna i menyn */
-    .menu-list li a {
-        text-decoration: none; /* Ta bort understrykning */
-        color: white; /* Textfärg */
-        font-weight: 300; 
-        padding: 5px; /* Inre avstånd */
-        display: block; /* Gör hela ytan klickbar */
-    }
-
-    /* Hover-effekt för länkar */
-    .menu-list li a:hover {
-        background-color: #373636; /* Bakgrundsfärg vid hover */
-        border-radius: 3px; /* Rundade hörn vid hover */
-    }
-
-    /* Minimalistisk sökruta med genomskinlig bakgrund */
-    .searchbar input[type=text] {
-        width: 60%;
-        font-size: 15pt;
-        margin: 50px;
-        padding: 10px;
-        border: none;
-        border-bottom: 2px solid #5bbad5;
-        border-right: 2px solid #5bbad5;
-        background-color: transparent;
-        outline: none;
-        color: white;
-    }
-
-}
-
-
-
-
-
-/* Anpassning för skärmar med maxbredd på 479px */
-@media only screen and (max-width: 479px) {
-    
-    .banner-text {
-        font-size: 26pt;
-    }
-
-    /* Minimalistisk sökruta med genomskinlig bakgrund */
-    .searchbar input[type=text] {
-        font-size: 12pt;
-        width: 60%;
-    }
-
-}
-
-
-/* Anpassning för skärmar med maxbredd på 400px */
-@media only screen and (max-width: 400px) {
-    
-    .banner-text {
-        font-size: 18pt;
-    }
-
-    /* Minimalistisk sökruta med genomskinlig bakgrund */
-    .searchbar input[type=text] {
-        font-size: 10pt;
-        width: 60%;
-    }
-
-    .menu-list {
-        right: 0px;
-    }
-
-}
-
-/*Anpassningar för skärmar med maxbredd på 300px */
-@media only screen and (max-width: 300px) {
+/* Small devices (phones, less than 576px) */
+@media (max-width: 576px) {
     .banner {
         height: 250px;
     }
+    .banner-text {
+        font-size: 24pt;
+    }
+    .searchbar input[type=text] {
+        width: 70%;
+        font-size: 12pt;
+    }
+    .restaurant img {
+        width: 140px;
+        height: 140px;
+    }
+    .restaurant p {
+        font-size: 14pt;
+    }
+    .site-title {
+        font-size: 12pt;
+    }
+    .menu-list {
+        font-size: 10pt;
+        right: 0;
+    }
+}
 
+/* Medium devices (tablets, 576px - 768px) */
+@media (min-width: 576px) and (max-width: 768px) {
+    .banner {
+        height: 300px;
+    }
+    .banner-text {
+        font-size: 28pt;
+    }
+    .restaurant img {
+        width: 160px;
+        height: 160px;
+    }
+    .restaurant p {
+        font-size: 16pt;
+    }
+    .site-title {
+        font-size: 14pt;
+    }
+    .menu-list {
+        font-size: 10pt;
+    }
+}
+
+/* Larger tablets and small laptops (768px and up) */
+@media (min-width: 768px) and (max-width: 992px) {
+    .banner {
+        height: 320px;
+    }
+    .banner-text {
+        font-size: 40pt;
+    }
+    .restaurant img {
+        width: 180px;
+        height: 180px;
+    }
     .restaurant p {
         font-size: 18pt;
     }
-
+    .site-title {
+        font-size: 16pt;
+    }
     .menu-list {
-        right: 0px;
+        font-size: 12pt;
+    }
+}
+
+/* Larger screens (992px and up) */
+@media (min-width: 992px) {
+    .banner {
+        height: 340px;
+    }
+    .banner-text {
+        font-size: 64pt;
+    }
+    .restaurant img {
+        width: 199px;
+        height: 199px;
+    }
+    .restaurant p {
+        font-size: 1.2rem;
+    }
+    .site-title {
+        font-size: 15pt;
     }
 }

@@ -2,7 +2,30 @@
 <html lang="sv">
 <head>
     
-    <!-- Google tag (gtag.js) -->
+
+    <!--Språket som används, UTF-8 för ÅÄÖ-->
+    <meta charset="UTF-8">
+    <!--Se till att sidan skalas till rätt bredd på mobiltelefoner-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!--Titeln på tabben-->
+    <title>MatAvtryck STARTSIDA</title>
+    <!--Länka till CSS filen-->
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- Importera "Lato" fonten från Google-->
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet">
+    
+    <!-- Favicons/bilder för tabben-->
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="manifest" href="favicon/site.webmanifest">
+    <link rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    
+    <!-- Google Analytics tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-Z0F4Z4M0N6"></script>
     <script>
     window.dataLayer = window.dataLayer || [];
@@ -11,24 +34,13 @@
 
     gtag('config', 'G-Z0F4Z4M0N6');
     </script>
-    
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MatAvtryck STARTSIDA</title>
-    <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet">
-    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
-    <link rel="manifest" href="favicon/site.webmanifest">
-    <link rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#5bbad5">
-    <meta name="msapplication-TileColor" content="#da532c">
-    <meta name="theme-color" content="#ffffff">
+
+
 </head>
 
 <body onload="clearSearchField()">
     
-    <!-- Banner delen av hemsidan -->
+    <!-- Banner -->
     <section class="banner">
         <header>
             <div class="header-container">
@@ -43,7 +55,7 @@
                         <div class="bar2"></div>
                         <div class="bar3"></div>
                     </div>
-                    <!-- href för att länka till andra sidor och aria-label för att öka tillgänglighet med exempelvis skärmläsare-->
+                    <!-- Listan i hamburgarmenyn med länkar till respektive restaurang-->
                     <ul class="menu-list" id="menuList" aria-label="Navigeringsmeny">
                         <li><a href="apa" aria-label="APA">APA</a></li>
                         <li><a href="bloco" aria-label="BLOCO">BLOCO</a></li>
