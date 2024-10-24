@@ -14,6 +14,9 @@ body {
     font-weight: 300;
 }
 
+/*
+---------Header-------------
+*/
 /* Styling för navbaren längst upp och alla objekt inom */
 .header-container {
     display: table;
@@ -53,404 +56,244 @@ body {
   font-size: 15pt;
 }
 
-/* Styling för själva bannern */
-.banner {
-    background-image: url('grayBanner.png'); /* bakgrundsbilden */
-    background-size: cover;
-    background-position: center;
-    padding: 100px 0;
-    text-align: center;
-    height: 440px;
-}
-
-/* Hamburgarmeny */
-.hamburger-menu {
-  display: inline-block;
-  cursor: pointer;
-  right: 0;
-  position: absolute;
-  margin: 15px;
-}
-
-/* Styling för strecken i hamburgarmenyn */
-.bar1, .bar2, .bar3 {
-  width: 20px;
-  height: 2px;
-  background-color: white;
-  margin: 3px 0;
-  transition: 0.4s;
-}
-
-/* Styling för ändring av första strecket */
-.change .bar1 {
-  transform: translate(0, 5px) rotate(-45deg);
-}
-
-/* Styling för ändring av andra strecket */
-.change .bar2 {opacity: 0;}
-
-/* Styling för ändring av tredje strecket */
-.change .bar3 {
-  transform: translate(0, -5px) rotate(45deg);
-}
-
-
-/* Styling för dropdown menyn */
-.menu-list {
-    display: none; /* Dölj menyn */
-    position: absolute;
-    top: 55px; 
-    right: 15px; 
-    background-color: rgb(24, 26, 27); 
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Skugga */
-    list-style-type: none; /* Ta bort punkterna */
-    padding: 10px;
-    padding-left: 20px;
-    border-radius: 5px; /* Rundade hörn */
-    font-size: 12pt;
-}
-
-/* När menyn visas */
-.menu-list.show {
-    display: grid; /* Visa menyn */
-    grid-template-columns: repeat(2, 1fr);
-}
-
-/* Styling för varje menyalternativ */
-.menu-list li {
-    margin: 10px 0; /* Avstånd mellan alternativen */
-}
-
-/* Styling för länkarna i menyn */
-.menu-list li a {
-    text-decoration: none; /* Ta bort understrykning */
-    color: white; /* Textfärg */
-    font-weight: 300; 
-    padding: 5px; /* Inre avstånd */
-    display: block; /* Gör hela ytan klickbar */
-    background-color: rgb(51, 44, 44);
-    width: 97%;
-}
-
-/* Hover-effekt för länkar */
-.menu-list li a:hover {
-    background-color: #373636; /* Bakgrundsfärg vid hover */
-    border-radius: 3px; /* Rundade hörn vid hover */
-}
-
-.banner-container {
-    min-width: 1340px;
-    height: 100%;
-}
-
-.restaurant-info img {
-    width: 300px;
-    height: 300px;
-    left: 130px;
-    top: 75px;
-    position: absolute;
-    overflow: hidden;
-}
-
-
-.banner-text {
-    font-size: 48pt;
-    color: white;
-    letter-spacing: 2px;
-    line-height: 1;
-    position: relative;
-    margin-bottom: 25px;
-    margin-left: 150px;
-}
-
-.banner-description {
-    font-size: 24pt;
-}
-
-.food {
-    margin: inherit;
-    width: 66%;
-    max-width: 1200px;
-    overflow: hidden;
-    margin: 50px;
-}
-
-.food img {
-    width: 230px;
-    height: 230px;
-}
-
-.description-title {
+/*Knapp för att gå till varukorgen*/
+.varukorg {
+    padding: 3px;
+    background-color: rgb(53, 57, 59);
+    border: none;
+    color: rgba(255,255,255,1);
+    font-size: 16pt;
     display: inline-block;
-    position: relative;
-    font-size: 36pt;
-    width: 58%;
-    vertical-align: top;
-    margin-left: 20px;
-    color: rgba(34,110,147,1);
+    position: absolute;
+    right: 20px;
+    cursor: pointer;
+    padding-left: 15px;
+    padding-right: 15px;
 }
 
-.description {
-    font-size: 18pt;
-    margin-top: 30px;
-    color: rgba(33,33,33,1);
-}
-
-.description-title h1 {
-    font-size: 40pt;
-}
-
-.banner-container {
-    display: flex;
-    justify-content: center; /* Centrerar innehållet horisontellt */
-    align-items: center; /* Centrerar innehållet vertikalt */
-    height: 100%;
-    padding: 20px; /* Lägger till lite utrymme runt innehållet */
-}
-
-.restaurant-info {
-    display: flex;
-    flex-direction: column; /* Gör så att bilden och texten staplas vertikalt */
-    align-items: center; /* Centrerar innehållet horisontellt */
-}
-
-.restaurant-info img {
-    width: 300px;
-    height: 300px;
-    margin-right: 50px; /* Flyttar bilden lite till höger */
-}
-
-.banner-description {
-    font-size: 18pt;
-    color: white;
-    background-color: rgba(117, 113, 113, 0.3);
-    padding: 10px 20px;
-    border-radius: 5px;
-    margin-left: 150px;
-}
-
-.banner-description:hover {
-    background-color: rgba(145, 140, 140, 0.3);
-    color: white;
+.varukorg:hover {
+    background-color: rgb(71, 76, 78);
 }
 
 /*
-------------MEDIA QUERIES----------------------
+---------Produkttitel, beskrivning etc--------
+*/
+.product-main-container {
+    margin-top: 100px; /* Add margin to accommodate the fixed header */
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.product-details {
+    display: flex;
+    gap: 90px;
+    align-items: center;
+}
+
+.product-image img {
+    width: 250px;
+    height: 250px;
+}
+
+.product-info h1 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.product-description {
+    font-size: 16px;
+    margin-bottom: 20px;
+    overflow-wrap: break-word;
+    width: 40%;
+}
+
+.product-actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.quantity-controls {
+    display: flex;
+    align-items: center;
+    background: #181A1B;
+    color: white;
+}
+
+.quantity-controls button {
+    width: 40px;
+    height: 40px;
+    background-color: rgb(151, 6, 6);
+    color: white;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.quantity-controls button:hover {
+    background-color: rgb(199, 9, 9);
+}
+
+#quantity-display {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+#add-to-cart {
+    padding: 10px;
+    background-color: rgb(24, 26, 27);
+    color: white;
+    border: none;
+    cursor: pointer;
+    height: 40px;
+}
+
+#add-to-cart:hover {
+    background-color: rgb(58, 64, 66);
+}
+
+/* Galleri-styling */
+.image-gallery {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.gallery {
+    display: flex;
+    gap: 15px;
+}
+
+.gallery-item {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    cursor: pointer;
+}
+
+.gallery-item:hover {
+    border: 2px solid black;
+}
+
+/* Border för vald bild */
+.selected {
+    border: 1px solid black;
+}
+
+.technical-specifications {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.technical-specifications h2 {
+    font-size: 20px;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.technical-specifications table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.technical-specifications th,
+.technical-specifications td {
+    padding: 10px;
+    text-align: left;
+}
+
+.technical-specifications th {
+    background-color: #e0e0e0;
+}
+
+.technical-specifications td {
+    background-color: #fff;
+}
+
+
+/*
+---------Footer-------------
 */
 
-/* Anpassningar för skärmar med maxbredd på 1076px */
-@media only screen and (max-width: 1076px) {
-    .banner-text {
-        font-size: 26pt;
-    }
+/* Footer styling */
+footer {
+    background-color: #181A1B;
+    color: white;
+    padding: 40px 20px;
+    text-align: center;
 }
 
-/* Media Queries för skärmar med maxbredd på 768px */
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.footer-section {
+    margin: 20px;
+}
+
+.footer-section h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #e0e0e0;
+}
+
+.footer-section p,
+.footer-section a {
+    font-size: 14px;
+    color: #ccc;
+    margin-bottom: 8px;
+    text-decoration: none;
+}
+
+.footer-section a:hover {
+    color: white;
+    text-decoration: underline;
+}
+
+.footer-bottom {
+    margin-top: 30px;
+    border-top: 1px solid #444;
+    padding-top: 10px;
+}
+
+.footer-bottom p {
+    font-size: 12px;
+    color: #777;
+}
+/*
+------------------------------------
+*/
+
+
+/* Responsive adjustments */
 @media (max-width: 768px) {
-    
-    .banner-text {
-        font-size: 26pt;
-    }
-
-    .banner-description {
-        font-size: 14pt;
-    }
-
-    .banner {
-        height: 350px;
-    }
-
-    .site-title {
-        font-size: 15pt;
-    }
-
-    .header-container {
+    .product-details {
         flex-direction: column;
+        align-items: center;
     }
 
-    /* Styling för dropdown menyn */
-    .menu-list {
-        display: none; /* Dölj menyn */
-        position: absolute;
-        top: 60px; 
-        right: 15px; 
-        background-color: rgb(24, 26, 27); 
-        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Skugga */
-        list-style-type: none; /* Ta bort punkterna */
-        padding: 5px;
-        border-radius: 5px; /* Rundade hörn */
-        font-size: 10pt;
-    }
-
-    /* När menyn visas */
-    .menu-list.show {
-        display: grid; /* Visa menyn */
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    /* Styling för varje menyalternativ */
-    .menu-list li {
-        margin: 10px 0; /* Avstånd mellan alternativen */
-    }
-
-    /* Styling för länkarna i menyn */
-    .menu-list li a {
-        text-decoration: none; /* Ta bort understrykning */
-        color: white; /* Textfärg */
-        font-weight: 300; 
-        padding: 5px; /* Inre avstånd */
-        display: block; /* Gör hela ytan klickbar */
-        background-color: rgb(51, 44, 44);
-        width: 97%;
-    }
-
-    /* Hover-effekt för länkar */
-    .menu-list li a:hover {
-        background-color: #373636; /* Bakgrundsfärg vid hover */
-        border-radius: 3px; /* Rundade hörn vid hover */
-    }
-    
-    .food {
-        margin: inherit;
-        overflow: hidden;
-        margin: 20px;
-        width: fit-content;
-    }
-
-    .food img {
+    .product-image img {
         width: 150px;
         height: 150px;
     }
-    .description-title {
-        display: inline-block;
-        position: relative;
-        font-size: 24pt;
-        width: 58%;
-        vertical-align: top;
-        margin-left: 10px;
-        color: rgba(34,110,147,1);
-    }
-    
-    .description {
-        font-size: 14pt;
-        margin-top: 10px;
-        color: rgba(33,33,33,1);
+
+    .gallery {
+        justify-content: center;
     }
 
-    .description-title h1 {
-        font-size: 24pt;
+        .footer-container {
+        flex-direction: column;
+        align-items: center;
     }
 
-    .banner-container {
-        min-width: 300px;
+    .footer-section {
+        margin: 10px 0;
     }
-
-    .restaurant-info img {
-        width: 150px;
-        height: 150px;
-        left: 0px;
-        margin-left: 15px;
-        margin-top: 40px;
-    }
-
-
-}
-
-/* Anpassning för skärmar med maxbredd på 479px */
-@media only screen and (max-width: 479px) {
-    
-    .banner-text {
-        font-size: 16pt;
-    }
-
-    /* Minimalistisk sökruta med genomskinlig bakgrund */
-    .searchbar input[type=text] {
-        font-size: 10pt;
-        width: 75%;
-    }
-
-}
-
-/*Anpassning för skärmar med maxbredd på 400px */
-@media only screen and (max-width: 400px) {
-    .banner-text {
-        font-size: 12pt;
-    }
-
-    .searchbar inpuit[type=text] {
-        font-size: 10pt;
-        width: 80%;
-    }
-
-    .food img {
-        width: 120px;
-        height: 120px;
-    }
-
-    .restaurant-info img {
-        width: 120px;
-        height: 120px;
-    }
-
-    .menu-list {
-        right: 0px;
-    }
-}
-
-/*Anpassningar för skärmar med maxbredd på 300px */
-@media only screen and (max-width: 300px) {
-    .restaurant-info img {
-        width: 90px;
-        height: 90px;
-        margin-top: 10px;
-    }
-
-    .description {
-        font-size: 10pt;
-    }
-
-    .description-title h1 {
-        font-size: 16pt;
-    }
-
-    .food img {
-        width: 90px;
-        height: 90px;
-    }
-
-    .banner {
-        height: 250px;
-    }
-
-    .banner-description {
-        font-size: 10pt;
-    }
-
-    .banner-text {
-        text-decoration: none;
-    }
-}
-
-
-
-
-
-/* Small devices (phones, less than 576px) */
-@media (max-width: 576px) {
-
-}
-
-/* Medium devices (tablets, 576px - 768px) */
-@media (min-width: 576px) and (max-width: 768px) {
-
-}
-
-/* Larger tablets and small laptops (768px and up) */
-@media (min-width: 768px) and (max-width: 992px) {
-
-}
-
-/* Larger screens (992px and up) */
-@media (min-width: 992px) {
-
 }

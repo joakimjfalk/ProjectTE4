@@ -1,0 +1,200 @@
+/* Global styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+/* Styling på <body> */
+body {
+    font-family: Lato, sans-serif;
+    background-color: #1c1c1c;
+    color: white;
+    font-weight: 300;
+}
+
+/*
+---------Header-------------
+*/
+/* Styling för navbaren längst upp och alla objekt inom */
+.header-container {
+    display: table;
+    position: fixed;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    background: rgb(24, 26, 27);
+    z-index: 5;
+}
+
+/* Styling för alla objekt inom header-container */
+.logo-title {
+    display: flex;
+    align-items: center; /* Sätter alla objekt på samma höjd */
+}
+
+/* Styling för loggan */
+.logo {
+  display: inline-block;
+  max-height: 56px;
+  max-width: 225px;
+  padding: 8px 4px 8px 12px;
+}
+
+/* Styling för företagets namn "MatAvtryck UF" */
+.site-title {
+  display: inline-block;
+  line-height: 1;
+  max-width: 380px;
+  outline: none;
+  overflow: hidden;
+  padding: 16px 12px;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  color: rgba(255,255,255,1);
+  font-size: 15pt;
+}
+
+/*Knapp för att gå till varukorgen*/
+.varukorg {
+    padding: 3px;
+    background-color: rgb(53, 57, 59);
+    border: none;
+    color: rgba(255,255,255,1);
+    font-size: 16pt;
+    display: inline-block;
+    position: absolute;
+    right: 20px;
+    cursor: pointer;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.varukorg:hover {
+    background-color: rgb(71, 76, 78);
+}
+
+/*
+--------------------------------------
+*/
+
+/*
+---------Checkout sektionen-----------
+*/
+
+.checkout {
+    height: 100px;
+}
+
+.cart-container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+h1 {
+    text-align: center;
+    color: #f7a6a6;
+    font-size: 36px;
+    margin-bottom: 40px;
+}
+
+.cart-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 40px;
+}
+
+.cart-table th, .cart-table td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #333;
+}
+
+.cart-table th {
+    font-size: 18px;
+    color: #f4f4f4;
+}
+
+.cart-table img {
+    width: 80px;
+    height: auto;
+    margin-right: 20px;
+}
+
+.cart-table .product-details {
+    display: flex;
+    align-items: center;
+}
+
+.cart-table .quantity {
+    display: flex;
+    align-items: center;
+}
+
+.cart-table .quantity span {
+    padding: 0 10px;
+    font-size: 18px;
+}
+
+.cart-table .quantity button {
+    background-color: #444;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.cart-table .quantity button:hover {
+    background-color: #666;
+}
+
+.cart-table .delete-btn {
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: #f44336;
+    cursor: pointer;
+}
+
+.cart-summary {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.cart-summary .summary-row,
+.cart-summary .summary-total,
+.cart-summary .summary-vat {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+}
+
+.cart-summary .summary-total {
+    font-size: 24px;
+    font-weight: bold;
+    color: #f7a6a6;
+}
+
+.cart-summary .summary-vat {
+    font-size: 14px;
+    color: #a0a0a0;
+}
+
+.checkout-btn {
+    width: 100%;
+    padding: 15px;
+    font-size: 18px;
+    background-color: #d32f2f;
+    color: white;
+    border: none;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+.checkout-btn:hover {
+    background-color: #b71c1c;
+}

@@ -1,21 +1,22 @@
 <!DOCTYPE html>
 <html lang="sv">
 <head>
-    
-
-	<!--Språket som används, UTF-8 för ÅÄÖ-->
+    <!--Språket som används, UTF-8 för ÅÄÖ-->
 	<meta charset="UTF-8">
 	<!--Se till att sidan skalas till rätt bredd på mobiltelefoner-->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		
 	<!--Titeln på tabben-->
-	<title>MatAvtryck STARTSIDA</title>
+	<title>Skärbräda</title>
 	<!--Länka till CSS filen-->
 	<link rel="stylesheet" href="productStyles.css">
 		
 	<!-- Importera "Lato" fonten från Google-->
 	<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet">
-		
+	
+	<!-- Importera shoppingcart ikonen -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
 	<!-- Favicons/bilder för tabben-->
 	<link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
 	<link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
@@ -34,64 +35,119 @@
 	
 	gtag('config', 'G-Z0F4Z4M0N6');
 	</script>
-	
-	
 </head>
 
 <body>
-    
-	<!-- Banner delen av hemsidan -->
-    <section class="banner">
 	<header>
-        <div class="header-container">
-            <div class="logo-title">
-			<a class="redirect" href="https://joakimjfalk.github.io/ProjectTE4/" aria-hidden="false" tabindex="0">
-                <img src="logos\logga.jpg" class="logo">
-                <span class="site-title">MatAvtryck UF</span>	
-			</a>
-					<!-- Hamburgarmeny -->
-					<div class="hamburger-menu" onclick="myFunction(this)">
-						<div class="bar1"></div>
-						<div class="bar2"></div>
-						<div class="bar3"></div>
-					</div>
-				<!-- Själva menyn i hamburgarmenyn -->
-				<ul class="menu-list" id="menuList">
-					<li><a href="litenbräda" aria-label="Liten skärbräda">Liten skäbräda</a></li>
-					<li><a href="storbräda" aria-label="Stor skärbräda">Stor skärbräda</a></li>
-					<li><a href="paket" aria-label="Brädpaket">Paket</a></li>
-				</ul>
-            </div>
-        </div>
-    </header>
-		<div class="banner-container">        
-			<div class="restaurant-info">
-            		<img src="products/litenbräda.jpg">
-				<div class="banner-text">skabbbräda </div>
-					<span class="banner-description">Lägg till i varukorg</span>
+		<div class="header-container">
+			<div class="logo-title">
+				<a class="redirect" href="index.html">
+					<img src="logos/logga.jpg" class="logo">
+					<span class="site-title">MatAvtryck UF</span>
+				</a>
+				<button class="varukorg" onclick="window.location.href='cart.html'">
+					<i class="fa fa-shopping-cart"></i>
+					<span id="cart-count" class="cart-count">0</span>
+				</button>
 			</div>
 		</div>
+	</header>
+
+	<!-- Produktsida -->
+	<main class="product-main-container">
+		<section class="product-details">
+			<!-- Huvudbilden ändras beroende på vald motiv -->
+			<div class="product-image">
+				<img id="main-product-image" src="motiv/litenbräda.jpg" alt="Valt motiv för skärbräda">
+			</div>
+
+			<div class="product-info">
+				<h1>Trä skärbräda</h1>
+				<p class="product-description">
+					En liten, men stadig skärbräda i trä, perfekt för mindre ytor. Skärbrädan är handgjord med högkvalitativa material och är idealisk för daglig användning i köket. Välj ditt favoritmotiv nedan för att anpassa din skärbräda.
+				</p>
+
+				<!-- Dropdown för att välja motiv -->
+				<label for="motif-select">Motiv:</label>
+				<select id="motif-select">
+					<option value="litenbräda" selected>Apa</option>
+					<option value="älg">Eklöf</option>
+					<option value="chark">Casper</option>
+				</select>
+
+				<div class="product-actions">
+					<div class="quantity-controls">
+						<button id="minus-btn">−</button>
+						<span id="quantity-display">1</span>
+						<button id="plus-btn">+</button>
+					</div>
+					<button id="add-to-cart">Lägg till i varukorg</button>
+				</div>
+			</div>
+		</section>
+
+		<!-- Bildgalleri för att välja motiv -->
+		<section class="image-gallery">
+			<div class="gallery">
+				<img class="gallery-item" src="motiv\litenbräda.jpg" alt="Motiv 1" data-motif="litenbräda">
+				<img class="gallery-item" src="motiv\älg.jpg" alt="Motiv 2" data-motif="älg">
+				<img class="gallery-item" src="motiv\chark.jpg" alt="Motiv 3" data-motif="chark">
+			</div>
+		</section>
+
+		<!-- Teknisk information -->
+		<section class="technical-specifications">
+			<h2>Tekniska specifikationer</h2>
+			<table>
+				<tr>
+					<th>Mått:</th>
+					<td>30 x 20 x 2 cm</td>
+				</tr>
+				<tr>
+					<th>Material:</th>
+					<td>Ek</td>
+				</tr>
+				<tr>
+					<th>Vikt:</th>
+					<td>0.75 kg</td>
+				</tr>
+				<tr>
+					<th>Skötselråd:</th>
+					<td>Handtvätt rekommenderas</td>
+				</tr>
+			</table>
+		</section>
+	</main>
 
 
+<!--Javaskript för bildgalleriet-->
+<script src="javascript\imgGallery.js"></script>
 
-    </section>
-
-	<!-- Sektion för maträtterna -->
-    <!--
-	<section class="food-menu-grid">
-       
-    </section>
-	-->
-
-<script>
-// Skript för att öppna/stäng hamburgarmenyn
-function myFunction(x) {
-  x.classList.toggle("change");
-    var menuList = document.getElementById("menuList");
-    menuList.classList.toggle("show"); // Visa/dölj menyn
-  }
-
-</script>
+<!--Footer med kontaktinformation-->
+<footer>
+    <div class="footer-container">
+        <div class="footer-section">
+            <h3>Kontaktinformation</h3>
+            <p>MatAvtryck UF</p>
+            <p>E-post: info@matavtryckuf.se</p>
+            <p>Telefon: 070-123 45 67</p>
+        </div>
+        <div class="footer-section">
+            <h3>Följ oss</h3>
+            <a href="https://www.facebook.com/matavtryckuf" target="_blank">Facebook</a> |
+            <a href="https://www.instagram.com/matavtryckuf" target="_blank">Instagram</a>
+        </div>
+        <div class="footer-section">
+            <h3>Adress</h3>
+            <p>MatAvtryck UF</p>
+            <p>Universitetsallén 17</p>
+            <p>852 34 Sverige</p>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2024 MatAvtryck UF. Alla rättigheter förbehållna.</p>
+    </div>
+</footer>
 
 </body>
 </html>

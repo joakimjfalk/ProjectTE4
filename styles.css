@@ -53,6 +53,25 @@ body {
   font-size: 15pt; /* Storleken på företagsnamnen*/
 }
 
+/*Knapp för att gå till varukorgen*/
+.varukorg {
+    padding: 3px;
+    background-color: rgb(53, 57, 59);
+    border: none;
+    color: rgba(255,255,255,1);
+    font-size: 16pt;
+    display: inline-block;
+    position: absolute;
+    right: 20px;
+    cursor: pointer;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.varukorg:hover {
+    background-color: rgb(71, 76, 78);
+}
+
 /* Bannern (bakgrundsbilden längst upp på sidan) */
 .banner {
     background-image: url('banner.png'); /* Bilden i bakgrunden (bannern)*/
